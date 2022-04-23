@@ -23,5 +23,9 @@ round/1 ... 関数名round 引数の数1
 
 アトム 良くわかってない
 
-## MIX
+## [MIX](https://elixir-lang.jp/getting-started/mix-otp/introduction-to-mix.html)
+```elixir
+ mix new kv --module KV
+
+```
 
