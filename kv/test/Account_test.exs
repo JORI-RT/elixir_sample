@@ -36,4 +36,15 @@ defmodule BalanceTest do
     assert account.balance.amount == 200
     assert result == :ok
   end
+  test "debit error" do
+    {result, message} = %Account{
+                          no: "1",
+                          balance: %Balance{
+                            amount: 300
+                          }
+                        }
+                        |> Account.debit(500)
+
+    assert result == :error
+  end
 end
