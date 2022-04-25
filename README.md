@@ -29,4 +29,4 @@ round/1 ... 関数名round 引数の数1
 
 ```
 
-fuga
+fuga hoge
