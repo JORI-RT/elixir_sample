@@ -1,3 +1,4 @@
+import Data.Char ---importは先頭に定義する必要がある
 f x = x + 1
 add x y = x + y
 a = 1
@@ -22,6 +23,11 @@ fib2 n
     | n == 1 = 0
     | n == 2 = 1
     | otherwise = fib2(n-1)+fib2(n-2)
+first (x:xs) = x ---リストの最初の要素を返す
+second (_:x:_) = x
+addsub x y = (x + y, x - y) --- タブル
+aa = addsub 1 2
+(a1, a2) = addsub 1 2 --- タブルの要素をとりだす
 
 main = do
     print (f 1)
@@ -40,3 +46,30 @@ main = do
     print $ fib(8)
     print $ fact2 5
     print $ fib2(8)
+    print $ [1, 2, 3, 4, 5] !! 3 --- listから3番目を取得
+    print [1..5] --- 連番を作成
+    print $ [1, 2, 3] ++ [4, 5] --- リストを結合
+    print $ 1:[2..5] --- 先頭に追加
+    print $ "abcde" --- 文字列はリストとして扱われる
+    print $ ['a', 'b', 'c', 'd', 'e']
+    print $ first [1..5]
+    print $ first "abcdef"
+    print $ second [1..5]
+    print $ second "abcdef"
+    ---組み込み関数
+    print $ length [1, 2, 3]
+    print $ sum [1..5]
+    print $ product [1..5]
+    print $ take 2 [1, 2, 3]
+    print $ drop 2 [1, 2, 3]
+    print $ reverse [1..5]
+    print $ addsub 1 2
+    print aa
+    print a1
+    print a2
+    let p2 = (1, 2)
+    --- タプル用の関数
+    print $ fst p2
+    print( snd p2)
+    print $ ord 'A'
+    print $ chr 65
