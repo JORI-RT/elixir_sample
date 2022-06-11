@@ -11,3 +11,9 @@ runghc hello.hs # これでコンパイルー＞実行まで
 :q
 
 ```
+
+
+## 概念
+簡約
+基底部: fact 0 = 1
+再帰部: fact n = n * fact (n - 1)
